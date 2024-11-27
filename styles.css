@@ -1,0 +1,264 @@
+/* إعدادات عامة */
+body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   line-height: 1.6;
+   background-color: #f4f4f4;
+   color: #333;
+}
+/* تصميم الهيدر ليكون متجاوبًا */
+header {
+    display: flex;
+    justify-content: space-between; /* اسم الموقع في اليسار والقائمة في اليمين */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: white;
+}
+
+header h1 {
+    font-size: 24px; /* حجم مناسب للهاتف */
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px; /* مسافة بين الروابط */
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column; /* ترتيب العمودي للشاشات الصغيرة */
+        text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column; /* تحويل القائمة إلى عمودية */
+        gap: 10px;
+    }
+}
+
+/* شريط التنقل (الهيدر) */
+.navbar {
+   display: flex;
+   justify-content: space-between; /* توزيع المسافات بالتساوي بين العناصر */
+   align-items: center;
+   background: linear-gradient(to right, #0066cc, #3399ff);
+   color: #fff;
+   padding: 15px 20px;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* الشعار في الجهة اليسرى */
+.navbar .logo {
+   font-size: 28px;
+   font-weight: bold;
+   display: inline-block;
+   letter-spacing: 1px;
+   text-align: left; /* التأكد من محاذاة النص لليسار */
+}
+
+/* قائمة الروابط في الجهة اليمنى */
+.navbar nav ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: flex-end; /* محاذاة الروابط لليمين */
+}
+
+.navbar nav ul li {
+   margin-left: 20px;
+}
+
+.navbar nav ul li a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   padding: 8px 15px;
+   border-radius: 5px;
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+   background-color: #ff6f61; /* تغيير اللون عند التمرير */
+   color: #fff;
+}
+
+/* خلفية الصفحة الرئيسية */
+/* خلفية الصفحة الرئيسية */
+.home {
+   background: url('https://images.pexels.com/photos/3756533/pexels-photo-3756533.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center/cover;
+   color: #fff;
+   padding: 120px 20px; /* زيادة المسافة padding لزيادة الحجم */
+   border-radius: 10px;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+   background-size: cover; /* تجعل الصورة تغطي كامل القسم */
+   background-position: center; /* تأكد من أن الصورة تتوسط القسم */
+}
+
+
+.home h2 {
+   font-size: 48px; /* تكبير حجم العنوان */
+   margin-bottom: 30px;
+}
+
+.home p {
+   font-size: 24px; /* تكبير حجم النص */
+   line-height: 1.8;
+}
+
+/* أقسام الصفحة */
+.container {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 20px;
+}
+
+section {
+   margin: 40px 0;
+   padding: 20px;
+   background: #fff;
+   border-radius: 10px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+   text-align: center;
+   color: #333;
+   margin-bottom: 20px;
+}
+
+p {
+   text-align: center;
+   font-size: 18px;
+}
+/* تصميم متجاوب للأنشطة */
+.activities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* شبكة مرنة */
+    gap: 20px;
+    padding: 20px;
+}
+
+.activity {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.activity img {
+    max-width: 100%; /* الصورة تأخذ حجم الحاوية */
+    height: auto; /* النسبة تبقى صحيحة */
+}
+/* الأنشطة *//* تأكد من أن الصور تظهر بشكل جيد */
+img {
+    max-width: 100%; /* تتكيف مع عرض الحاوية */
+    height: auto; /* تحافظ على النسبة */
+    border-radius: 10px; /* حواف مدورة */
+}
+
+/* تحسين النصوص */
+.activity h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.activity p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+.activity-list {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 20px;
+}
+
+.activity-item img {
+   width: 100%;
+   border-radius: 10px;
+}
+
+.activity-item h3 {
+   text-align: center;
+   margin: 10px 0;
+   color: #555;
+}
+
+/* نموذج التواصل */
+.contact-form form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   font-size: 16px;
+}
+
+.contact-form button {
+   padding: 10px;
+   background-color: #333;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 18px;
+}
+
+.contact-form button:hover {
+   background-color: #575757;
+}
+
+/* وسائل التواصل */
+.social-media a img {
+   width: 40px;
+   margin: 0 10px;
+   border-radius: 50%;
+   transition: transform 0.3s ease;
+}
+
+.social-media a img:hover {
+   transform: scale(1.1);
+}
+
+/* تذييل الصفحة */
+footer {
+   
+   background: #333; /* خلفية داكنة */
+   color: #fff;
+   text-align: center;
+   padding: 20px 0;
+   margin-top: 20px;
+}
+footer p {
+   font-size: 16px;
+   margin: 0;
+}
+/* إخفاء القائمة الكبيرة على الهواتف */
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: none;
+    }
+
+    nav .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+}
